@@ -38,7 +38,7 @@ namespace bubble
             if (nasoka)
             {
                 x += 4;
-                if (x + radius >= width - 15)
+                if (x + radius >= width - 50)
                 {
                     nasoka = false;
                 }
@@ -46,7 +46,7 @@ namespace bubble
             else
             {
                 x -= 4;
-                if (x - radius <= 0)
+                if (x - radius <= 35)
                 {
                     nasoka = true;
                 }
@@ -56,21 +56,31 @@ namespace bubble
         {
             if (bounce)
             {
-                y += 0.5*zabrzuvanje;
+                double ynext = y;
+                ynext += 0.5*zabrzuvanje;
                 zabrzuvanje +=1;
-                if (y + radius >= height - 40 )
+                if (ynext + radius > height - 60 )
                 {
                     zabrzuvanje = 2*Math.Sqrt(radius)+20;
                     bounce = false;
                 }
+                else
+                {
+                    y = ynext;
+                }
             }
             else
             {
-                y -= 0.5 * zabrzuvanje;
+                double ynext = y;
+                ynext -= 0.5 * zabrzuvanje;
                 zabrzuvanje -= 1 ;
                 if (zabrzuvanje<=0)
                 {
                     bounce = true;
+                }
+                else
+                {
+                    y = ynext;
                 }
             }
         }

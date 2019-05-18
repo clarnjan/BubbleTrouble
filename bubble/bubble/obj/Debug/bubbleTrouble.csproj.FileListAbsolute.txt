@@ -8,3 +8,13 @@ C:\Users\Jas\source\repos\bubble\bubble\obj\Debug\bubbleTrouble.csproj.GenerateR
 C:\Users\Jas\source\repos\bubble\bubble\obj\Debug\bubbleTrouble.csproj.CoreCompileInputs.cache
 C:\Users\Jas\source\repos\bubble\bubble\obj\Debug\bubble.exe
 C:\Users\Jas\source\repos\bubble\bubble\obj\Debug\bubble.pdb
+C:\Users\Kate\Desktop\BubbleTrouble\bubble\bubble\bin\Debug\bubble.exe.config
+C:\Users\Kate\Desktop\BubbleTrouble\bubble\bubble\bin\Debug\bubble.exe
+C:\Users\Kate\Desktop\BubbleTrouble\bubble\bubble\bin\Debug\bubble.pdb
+C:\Users\Kate\Desktop\BubbleTrouble\bubble\bubble\obj\Debug\bubbleTrouble.csprojAssemblyReference.cache
+C:\Users\Kate\Desktop\BubbleTrouble\bubble\bubble\obj\Debug\bubble.Form1.resources
+C:\Users\Kate\Desktop\BubbleTrouble\bubble\bubble\obj\Debug\bubble.Properties.Resources.resources
+C:\Users\Kate\Desktop\BubbleTrouble\bubble\bubble\obj\Debug\bubbleTrouble.csproj.GenerateResource.cache
+C:\Users\Kate\Desktop\BubbleTrouble\bubble\bubble\obj\Debug\bubbleTrouble.csproj.CoreCompileInputs.cache
+C:\Users\Kate\Desktop\BubbleTrouble\bubble\bubble\obj\Debug\bubble.exe
+C:\Users\Kate\Desktop\BubbleTrouble\bubble\bubble\obj\Debug\bubble.pdb
