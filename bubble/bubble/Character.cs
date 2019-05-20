@@ -12,32 +12,47 @@ namespace bubble
     {
         public int x { get; set; }
         public Image slika;
-
+        public int ammo { get; set; }
         public Character(Image i,int x)
         {
             this.x = x;
             slika = i;
+            ammo = 1;
         }
 
         public void Draw(Graphics g,int Height)
         {
-            g.DrawImageUnscaled(slika, x - 63, Height - 180);
+            g.DrawImageUnscaled(slika, x-40, Height - 190);
         }
 
-        public void Move(Keys keydata)
+        public void Move(Keys keydata,int Width)
         {
             if (keydata == Keys.Right)
             {
-                x += 10;
-                slika = Properties.Resources.desnoT;
+                int xnext = x;
+                xnext += 10;
+                if (xnext < Width -6)
+                    x = xnext;
+                slika = Properties.Resources.SBTDesno;
             }
             if (keydata == Keys.Left)
             {
-                x -= 10;
-                slika = Properties.Resources.levoT;
+                int xnext = x;
+                xnext -= 10;
+                if (xnext > 95)
+                    x = xnext;
+                slika = Properties.Resources.SBTLevo;
             }
         }
-
+        public int Shoot()
+        {
+            if (ammo > 0)
+            {
+                ammo--;
+                return x;
+            }
+            return 0;
+        }
 
     }
 }

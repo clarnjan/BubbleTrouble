@@ -121,13 +121,19 @@
   <data name="brick2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brick2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bricks" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bricks.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dole" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dole.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="desnoT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\desnoT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="krusty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\krusty.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="levoT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\levoT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SBTDesno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SBTDesno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SBTLevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SBTLevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vrvT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vrvT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

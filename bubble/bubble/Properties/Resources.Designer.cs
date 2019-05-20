@@ -73,9 +73,9 @@ namespace bubble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bricks {
+        internal static System.Drawing.Bitmap dole {
             get {
-                object obj = ResourceManager.GetObject("bricks", resourceCulture);
+                object obj = ResourceManager.GetObject("dole", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace bubble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap desnoT {
+        internal static System.Drawing.Bitmap krusty {
             get {
-                object obj = ResourceManager.GetObject("desnoT", resourceCulture);
+                object obj = ResourceManager.GetObject("krusty", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,29 @@ namespace bubble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap levoT {
+        internal static System.Drawing.Bitmap SBTDesno {
             get {
-                object obj = ResourceManager.GetObject("levoT", resourceCulture);
+                object obj = ResourceManager.GetObject("SBTDesno", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SBTLevo {
+            get {
+                object obj = ResourceManager.GetObject("SBTLevo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vrvT {
+            get {
+                object obj = ResourceManager.GetObject("vrvT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bubble.cs" />
+    <Compile Include="bubbleDoc.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -96,6 +97,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\brick2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SBDesno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SBLevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\houses.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\krusty.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SBTDesno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SBTLevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vrvT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dole.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
