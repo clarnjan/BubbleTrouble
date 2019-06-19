@@ -35,6 +35,7 @@ namespace bubble
 
         public void Move(int width)
         {
+            
             if (nasoka)
             {
                 x += 4;
@@ -52,6 +53,31 @@ namespace bubble
                 }
             }
         }
+
+        public bool kolizija(int height)
+        {
+            Character sb = InGame.karakter;
+            if (y >= height - 190)
+            {
+                //kolizija od levo
+                if (x <= sb.x && x + radius >= sb.x - 40)
+                    return true;
+                //kolizija od desno
+                if (x >= sb.x && x - radius <= sb.x + 40)
+                    return true;
+            }
+            //kolizija od lev kjosh
+            if (Math.Sqrt((x - (sb.x-40)) * (x - (sb.x-40)) + (y - (height - 190)) * (y - (height - 190)))<=radius)
+                return true;
+            //kolizija od desen kjosh
+            if (Math.Sqrt((x - (sb.x + 40)) * (x - (sb.x + 40)) + (y - (height - 190)) * (y - (height - 190))) <= radius)
+                return true;
+            //kolizija od gore
+            if (x >= sb.x - 40 && x <= sb.x + 40 && y+radius >= height - 190)
+                return true;
+            return false;
+        }
+
         public void Gravity(int height)
         {
             if (bounce)

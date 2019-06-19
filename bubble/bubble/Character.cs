@@ -13,11 +13,14 @@ namespace bubble
         public int x { get; set; }
         public Image slika;
         public int ammo { get; set; }
+        public int lives { get; set; }
+
         public Character(Image i,int x)
         {
             this.x = x;
             slika = i;
             ammo = 1;
+            lives = 3;
         }
 
         public void Draw(Graphics g,int Height)
@@ -31,7 +34,7 @@ namespace bubble
             {
                 int xnext = x;
                 xnext += 10;
-                if (xnext < Width -6)
+                if (xnext < Width -90)
                     x = xnext;
                 slika = Properties.Resources.SBTDesno;
             }
@@ -39,7 +42,7 @@ namespace bubble
             {
                 int xnext = x;
                 xnext -= 10;
-                if (xnext > 95)
+                if (xnext > 75)
                     x = xnext;
                 slika = Properties.Resources.SBTLevo;
             }

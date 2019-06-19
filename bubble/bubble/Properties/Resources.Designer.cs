@@ -73,9 +73,29 @@ namespace bubble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dole {
+        internal static System.Drawing.Bitmap KeyLeftTransparent {
             get {
-                object obj = ResourceManager.GetObject("dole", resourceCulture);
+                object obj = ResourceManager.GetObject("KeyLeftTransparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap keyRightTransparent {
+            get {
+                object obj = ResourceManager.GetObject("keyRightTransparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap keyUpTransparent {
+            get {
+                object obj = ResourceManager.GetObject("keyUpTransparent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +106,16 @@ namespace bubble.Properties {
         internal static System.Drawing.Bitmap krusty {
             get {
                 object obj = ResourceManager.GetObject("krusty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sbLives {
+            get {
+                object obj = ResourceManager.GetObject("sbLives", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +143,9 @@ namespace bubble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap vrvT {
+        internal static System.Drawing.Bitmap StartBackground {
             get {
-                object obj = ResourceManager.GetObject("vrvT", resourceCulture);
+                object obj = ResourceManager.GetObject("StartBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

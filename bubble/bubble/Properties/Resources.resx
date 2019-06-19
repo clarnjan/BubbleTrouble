@@ -121,9 +121,6 @@
   <data name="brick2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brick2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dole" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dole.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="krusty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\krusty.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,7 +130,19 @@
   <data name="SBTLevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SBTLevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="vrvT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vrvT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="KeyLeftTransparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KeyLeftTransparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="keyRightTransparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keyRightTransparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="keyUpTransparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keyUpTransparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sbLives" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sbLives.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StartBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StartBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

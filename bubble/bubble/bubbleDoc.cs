@@ -16,7 +16,7 @@ namespace bubble
             if (level == 1)
             {
 
-                Bubble topche = new Bubble(100, 100, 80, Color.Blue);
+                Bubble topche = new Bubble(120, 150, 80, Color.Blue);
                 Bubble topche1 = new Bubble(600, 100, 40, Color.Blue);
                 Bubble topche2 = new Bubble(300, 100, 10, Color.Blue);
                 lista.Add(topche);
@@ -31,14 +31,19 @@ namespace bubble
                 b.Draw(g);
             }
         }
-        public void Move(int width,int height)
+        public bool Move(int width,int height)
         {
             foreach(Bubble b in lista)
             {
                 b.Move(width);
                 b.Gravity(height);
-            }
+                if (b.kolizija(height))
+                {
+                    return true;
+                }
 
+            }
+            return false;
         }
     }
 }
