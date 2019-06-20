@@ -149,5 +149,8 @@
   <ItemGroup>
     <None Include="Resources\StartBackground.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\krustySmall.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

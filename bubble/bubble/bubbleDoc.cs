@@ -41,7 +41,46 @@ namespace bubble
                 {
                     return true;
                 }
+            }
+            return false;
+        }
+        public bool checkPop()
+        {
+            foreach(Bubble b in lista)
+            {
+                if (b.checkPop())
+                {
+                    if (b.radius == 10)
+                        lista.Remove(b);
+                    if (b.radius == 80)
+                    {
+                        Bubble b1= new Bubble((int)b.x+40,(int)b.y,40,Color.Blue);
+                        Bubble b2 = new Bubble((int)b.x-40, (int)b.y, 40, Color.Blue);
+                        b2.nasoka = false;
+                        b1.zabrzuvanje = 15;
+                        b2.zabrzuvanje = 15;
+                        b1.bounce = false;
+                        b2.bounce = false;
+                        lista.Add(b1);
+                        lista.Add(b2);
+                        lista.Remove(b);
+                    }
+                    if (b.radius == 40)
+                    {
+                        Bubble b1 = new Bubble((int)b.x + 20, (int)b.y, 10, Color.Blue);
+                        Bubble b2 = new Bubble((int)b.x - 20, (int)b.y, 10, Color.Blue);
+                        b2.nasoka = false;
+                        b1.zabrzuvanje = 15;
+                        b2.zabrzuvanje = 15;
+                        b1.bounce = false;
+                        b2.bounce = false;
+                        lista.Add(b1);
+                        lista.Add(b2);
+                        lista.Remove(b);
+                    }
 
+                    return true;
+                }
             }
             return false;
         }

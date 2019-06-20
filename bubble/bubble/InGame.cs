@@ -13,25 +13,37 @@ namespace bubble
     public partial class InGame : Form
     {
         public static Character karakter;
-        Rectangle strela;
+        public static Rectangle strela;
         bubbleDoc lista;
         bool desno = false;
         bool levo = false;
         int shot = 0;
+        int startTicks;
+        int lives = 3;
 
         public InGame()
         {
             InitializeComponent();
             DoubleBuffered = true;
+            lives = 3;
+            this.BackgroundImage = Properties.Resources.krustySmall;
             newGame();
-            karakter = new Character(Properties.Resources.SBTDesno, Width / 2);
         }
 
         public void newGame()
         {
             lista = new bubbleDoc(1);
-            Time.Start();
-            timer1.Start();
+            startTicks = 2;
+            shot = 0;
+            desno = false;
+            levo = false;
+            strela = new Rectangle();
+            lbInfo.Visible = true;
+            lbInfo.Text = "3";
+            karakter = new Character(Properties.Resources.SBTDesno, Width / 2);
+            pbTime.Value = 0;
+            timerStart.Start();
+            Invalidate();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -57,59 +69,73 @@ namespace bubble
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (lista.Move(Width, Height) == false)
+            if (lista.Move(Width, Height))
             {
-                if (desno && !levo)
-                    karakter.Move(Keys.Right, Width);
-                else if (levo && !desno)
-                    karakter.Move(Keys.Left, Width);
-                if (shot != 0)
-                {
-                    if (strela.Y >= 53)
-                    {
-                        strela.Y -= 8;
-                        strela.Height += 8;
-                    }
-                    else
-                    {
-                        karakter.ammo++;
-                        shot = 0;
-                        strela = new Rectangle(0, 0, 0, 0);
-                    }
-                }
+                die();
             }
-            else
+            if (desno && !levo)
+                karakter.Move(Keys.Right, Width);
+            else if (levo && !desno)
+                karakter.Move(Keys.Left, Width);
+            if (shot != 0)
             {
-                timer1.Stop();
-                Time.Stop();
-                karakter.lives--;
-                if (karakter.lives == 0)
+                if (strela.Y >= 53)
                 {
-                    MessageBox.Show("GAME OVER");
+                    strela.Y -= 8;
+                    strela.Height += 8;
                 }
                 else
-                newGame();
-            }
-            
-            Invalidate();
-        }
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Right)
-                desno = true;
-            else if (e.KeyData == Keys.Left)
-                levo = true;
-
-            else if(e.KeyData == Keys.Up)
-            {
-                int pom = karakter.Shoot();
-                if (pom != 0)
                 {
-                    strela = new Rectangle(pom, Height - 170, 5, 100);
-                    shot = pom;
+                    karakter.ammo++;
+                    shot = 0;
+                    strela = new Rectangle();
                 }
             }
+            if(lista.checkPop())
+            {
+                karakter.ammo++;
+                shot = 0;
+                strela = new Rectangle();
+            }
             Invalidate();
+        }
+
+        private void die()
+        {
+            timer1.Stop();
+            Time.Stop();
+            lives--;
+            if (lives == 2)
+                pictureBox3.Visible = false;
+            else if (lives == 1)
+                pictureBox2.Visible = false;
+            if (lives == 0)
+            {
+                pictureBox1.Visible = false;
+                lbInfo.Text="GAME OVER";
+                lbInfo.Visible = true;
+            }
+            else
+                newGame();
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+                if (e.KeyData == Keys.Right)
+                    desno = true;
+                else if (e.KeyData == Keys.Left)
+                    levo = true;
+                else if (e.KeyData == Keys.Up && timer1.Enabled==true)
+                {
+                    int pom = karakter.Shoot();
+                    if (pom != 0)
+                    {
+                        strela = new Rectangle(pom, Height - 170, 5, 100);
+                        shot = pom;
+                    }
+                }
+                Invalidate();
+            
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -134,6 +160,26 @@ namespace bubble
         {
             if (pbTime.Value < 100)
                 pbTime.Value += 1;
+            else
+            {
+                die();
+            }
+        }
+        private void timerStart_Tick(object sender, EventArgs e)
+        {
+            lbInfo.Text = startTicks.ToString();
+            if (startTicks == 0)
+            {
+                lbInfo.Text = "GO!";
+                timer1.Start();
+                Time.Start();
+            }
+            if (startTicks == -1)
+            {
+                lbInfo.Visible = false;
+                timerStart.Stop();
+            }
+            startTicks--;
         }
     }
 }

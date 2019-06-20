@@ -103,9 +103,9 @@ namespace bubble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap krusty {
+        internal static System.Drawing.Bitmap krustySmall {
             get {
-                object obj = ResourceManager.GetObject("krusty", resourceCulture);
+                object obj = ResourceManager.GetObject("krustySmall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

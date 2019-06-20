@@ -40,6 +40,8 @@
             this.lbLives = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.timerStart = new System.Windows.Forms.Timer(this.components);
+            this.lbInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -148,11 +150,30 @@
             this.label2.Text = "MENU";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // timerStart
+            // 
+            this.timerStart.Interval = 1000;
+            this.timerStart.Tick += new System.EventHandler(this.timerStart_Tick);
+            // 
+            // lbInfo
+            // 
+            this.lbInfo.AutoSize = true;
+            this.lbInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lbInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbInfo.ForeColor = System.Drawing.Color.Red;
+            this.lbInfo.Location = new System.Drawing.Point(741, 365);
+            this.lbInfo.Name = "lbInfo";
+            this.lbInfo.Size = new System.Drawing.Size(46, 51);
+            this.lbInfo.TabIndex = 16;
+            this.lbInfo.Text = "3";
+            // 
             // InGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1642, 853);
+            this.Controls.Add(this.lbInfo);
             this.Controls.Add(this.pbTime);
             this.Controls.Add(this.lbLevel);
             this.Controls.Add(this.pictureBox3);
@@ -161,6 +182,7 @@
             this.Controls.Add(this.lbLives);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "InGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -188,6 +210,8 @@
         private System.Windows.Forms.Label lbLives;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timerStart;
+        private System.Windows.Forms.Label lbInfo;
     }
 }
 

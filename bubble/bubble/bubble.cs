@@ -54,30 +54,6 @@ namespace bubble
             }
         }
 
-        public bool kolizija(int height)
-        {
-            Character sb = InGame.karakter;
-            if (y >= height - 190)
-            {
-                //kolizija od levo
-                if (x <= sb.x && x + radius >= sb.x - 40)
-                    return true;
-                //kolizija od desno
-                if (x >= sb.x && x - radius <= sb.x + 40)
-                    return true;
-            }
-            //kolizija od lev kjosh
-            if (Math.Sqrt((x - (sb.x-40)) * (x - (sb.x-40)) + (y - (height - 190)) * (y - (height - 190)))<=radius)
-                return true;
-            //kolizija od desen kjosh
-            if (Math.Sqrt((x - (sb.x + 40)) * (x - (sb.x + 40)) + (y - (height - 190)) * (y - (height - 190))) <= radius)
-                return true;
-            //kolizija od gore
-            if (x >= sb.x - 40 && x <= sb.x + 40 && y+radius >= height - 190)
-                return true;
-            return false;
-        }
-
         public void Gravity(int height)
         {
             if (bounce)
@@ -109,6 +85,54 @@ namespace bubble
                     y = ynext;
                 }
             }
+        }
+
+        public bool kolizija(int height)
+        {
+            Character sb = InGame.karakter;
+            if (y >= height - 190)
+            {
+                //kolizija od levo
+                if (x <= sb.x && x + radius >= sb.x - 40)
+                    return true;
+                //kolizija od desno
+                if (x >= sb.x && x - radius <= sb.x + 40)
+                    return true;
+            }
+            //kolizija od lev kjosh
+            if (Math.Sqrt((x - (sb.x - 40)) * (x - (sb.x - 40)) + (y - (height - 190)) * (y - (height - 190))) <= radius)
+                return true;
+            //kolizija od desen kjosh
+            if (Math.Sqrt((x - (sb.x + 40)) * (x - (sb.x + 40)) + (y - (height - 190)) * (y - (height - 190))) <= radius)
+                return true;
+            //kolizija od gore
+            if (x >= sb.x - 40 && x <= sb.x + 40 && y + radius >= height - 190)
+                return true;
+            return false;
+        }
+
+        public bool checkPop()
+        {
+            Rectangle strela = InGame.strela;
+            if (y >= strela.Top)
+            {
+                //kolizija od levo
+                if (x <= strela.Left && x + radius >= strela.Left)
+                    return true;
+                //kolizija od desno
+                if (x >= strela.Left && x - radius <= strela.Left+5)
+                    return true;
+            }
+            //kolizija od lev kjosh
+            if (Math.Sqrt((x - strela.Left) * (x - strela.Left) + (y - strela.Top) * (y - strela.Top)) <= radius)
+                return true;
+            //kolizija od desen kjosh
+            if (Math.Sqrt((x - strela.Left+5) * (x - strela.Left + 5) + (y - strela.Top) * (y - strela.Top)) <= radius)
+                return true;
+            //kolizija od gore
+            if (x >= strela.Left && x <= strela.Left+5 && y + radius >= strela.Top)
+                return true;
+            return false;
         }
     }
 }
