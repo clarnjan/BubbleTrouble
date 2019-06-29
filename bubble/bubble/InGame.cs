@@ -120,7 +120,7 @@ namespace bubble
                 level += 1;
                 lbLevel.Text = "LEVEL " + level.ToString();
                 score += 100 - pbTime.Value;
-                if(level<6)
+                if(level<7)
                 newGame();
                 else
                 {

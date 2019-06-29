@@ -154,7 +154,7 @@
             this.btnControles.Name = "btnControles";
             this.btnControles.Size = new System.Drawing.Size(244, 58);
             this.btnControles.TabIndex = 11;
-            this.btnControles.Text = "Controles";
+            this.btnControles.Text = "Controls";
             this.btnControles.UseVisualStyleBackColor = false;
             this.btnControles.Click += new System.EventHandler(this.btnControles_Click);
             // 
