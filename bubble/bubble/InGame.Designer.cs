@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timerStart = new System.Windows.Forms.Timer(this.components);
             this.lbInfo = new System.Windows.Forms.Label();
+            this.lbScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,9 +56,9 @@
             // pbTime
             // 
             this.pbTime.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pbTime.Location = new System.Drawing.Point(500, 20);
+            this.pbTime.Location = new System.Drawing.Point(355, 20);
             this.pbTime.Name = "pbTime";
-            this.pbTime.Size = new System.Drawing.Size(700, 20);
+            this.pbTime.Size = new System.Drawing.Size(600, 20);
             this.pbTime.Step = 1;
             this.pbTime.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pbTime.TabIndex = 8;
@@ -130,11 +131,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Goudy Stout", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(264, 20);
+            this.label1.Location = new System.Drawing.Point(207, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 26);
+            this.label1.Size = new System.Drawing.Size(128, 26);
             this.label1.TabIndex = 9;
-            this.label1.Text = "TIME LEFT:";
+            this.label1.Text = "TIME :";
             // 
             // label2
             // 
@@ -167,12 +168,25 @@
             this.lbInfo.TabIndex = 16;
             this.lbInfo.Text = "3";
             // 
+            // lbScore
+            // 
+            this.lbScore.AutoSize = true;
+            this.lbScore.BackColor = System.Drawing.Color.Transparent;
+            this.lbScore.Font = new System.Drawing.Font("Goudy Stout", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lbScore.Location = new System.Drawing.Point(1014, 18);
+            this.lbScore.Name = "lbScore";
+            this.lbScore.Size = new System.Drawing.Size(155, 26);
+            this.lbScore.TabIndex = 17;
+            this.lbScore.Text = "SCORE: 0";
+            // 
             // InGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1642, 853);
+            this.Controls.Add(this.lbScore);
             this.Controls.Add(this.lbInfo);
             this.Controls.Add(this.pbTime);
             this.Controls.Add(this.lbLevel);
@@ -212,6 +226,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timerStart;
         private System.Windows.Forms.Label lbInfo;
+        private System.Windows.Forms.Label lbScore;
     }
 }
 

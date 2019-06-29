@@ -46,7 +46,7 @@
             // imgGore
             // 
             this.imgGore.BackColor = System.Drawing.Color.Transparent;
-            this.imgGore.BackgroundImage = global::bubble.Properties.Resources.keyUpTransparent;
+            this.imgGore.BackgroundImage = global::bubble.Properties.Resources.spaceTr;
             this.imgGore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgGore.Location = new System.Drawing.Point(283, 200);
             this.imgGore.Name = "imgGore";

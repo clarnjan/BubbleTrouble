@@ -93,9 +93,9 @@ namespace bubble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap keyUpTransparent {
+        internal static System.Drawing.Bitmap krustySmall {
             get {
-                object obj = ResourceManager.GetObject("keyUpTransparent", resourceCulture);
+                object obj = ResourceManager.GetObject("krustySmall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,49 @@ namespace bubble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap krustySmall {
+        internal static System.Drawing.Bitmap level2 {
             get {
-                object obj = ResourceManager.GetObject("krustySmall", resourceCulture);
+                object obj = ResourceManager.GetObject("level2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap level3 {
+            get {
+                object obj = ResourceManager.GetObject("level3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap level4 {
+            get {
+                object obj = ResourceManager.GetObject("level4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap level5 {
+            get {
+                object obj = ResourceManager.GetObject("level5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap level6 {
+            get {
+                object obj = ResourceManager.GetObject("level6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +176,16 @@ namespace bubble.Properties {
         internal static System.Drawing.Bitmap SBTLevo {
             get {
                 object obj = ResourceManager.GetObject("SBTLevo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spaceTr {
+            get {
+                object obj = ResourceManager.GetObject("spaceTr", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

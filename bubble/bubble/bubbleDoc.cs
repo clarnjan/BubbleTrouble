@@ -15,13 +15,69 @@ namespace bubble
             lista = new List<Bubble>();
             if (level == 1)
             {
-
-                Bubble topche = new Bubble(120, 150, 80, Color.Blue);
-                Bubble topche1 = new Bubble(600, 100, 40, Color.Blue);
-                Bubble topche2 = new Bubble(300, 100, 10, Color.Blue);
+                Bubble topche = new Bubble(600, 150, 80, Color.Blue);
+                lista.Add(topche);
+            }
+            else if (level == 2)
+            {
+                Bubble topche = new Bubble(400, 150, 80, Color.Blue);
+                Bubble topche1 = new Bubble(800, 150, 80, Color.Blue);
+                topche.nasoka = false;
+                lista.Add(topche);
+                lista.Add(topche1);
+            }
+            else if (level == 3)
+            {
+                for(int i =0; i <5; i++)
+                {
+                    Bubble topche = new Bubble(100+i*40, 400, 10, Color.Blue);
+                    lista.Add(topche);
+                }
+                for (int i = 0; i < 5; i++)
+                {
+                    Bubble topche = new Bubble(900 + i * 40, 400, 10, Color.Blue);
+                    topche.nasoka = false;
+                    lista.Add(topche);
+                }
+            }
+            else if (level == 4)
+            {
+                Bubble topche = new Bubble(600, 150, 80, Color.Blue);
+                Bubble topche1 = new Bubble(400, 150, 40, Color.Blue);
+                Bubble topche2 = new Bubble(800, 150, 40, Color.Blue);
+                topche1.nasoka = false;
+                topche2.nasoka = false;
                 lista.Add(topche);
                 lista.Add(topche1);
                 lista.Add(topche2);
+            }
+            else if (level == 5)
+            {
+                Bubble topche = new Bubble(400, 150, 80, Color.Blue);
+                Bubble topche1 = new Bubble(600, 150, 80, Color.Blue);
+                Bubble topche2 = new Bubble(800, 150, 80, Color.Blue);
+                lista.Add(topche);
+                lista.Add(topche1);
+                lista.Add(topche2);
+            }
+            else if (level == 6)
+            {
+                Bubble topche = new Bubble(100, 150, 40, Color.Blue);
+                Bubble topche1 = new Bubble(250, 150, 40, Color.Blue);
+                Bubble topche2 = new Bubble(400, 150, 40, Color.Blue);
+                lista.Add(topche);
+                lista.Add(topche1);
+                lista.Add(topche2);
+                Bubble topche3 = new Bubble(700, 150, 40, Color.Blue);
+                Bubble topche4 = new Bubble(850, 150, 40, Color.Blue);
+                Bubble topche5 = new Bubble(1000, 150, 40, Color.Blue);
+                topche.nasoka = false;
+                topche1.nasoka = false;
+                topche2.nasoka = false;
+                lista.Add(topche3);
+                lista.Add(topche4);
+                lista.Add(topche5);
+
             }
         }
         public void Draw(Graphics g)
@@ -50,6 +106,7 @@ namespace bubble
             {
                 if (b.checkPop())
                 {
+                    InGame.score+=5;
                     if (b.radius == 10)
                         lista.Remove(b);
                     if (b.radius == 80)

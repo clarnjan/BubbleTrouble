@@ -20,19 +20,35 @@ namespace bubble
         int shot = 0;
         int startTicks;
         int lives = 3;
+        int level;
+        public static int score = 0;
 
         public InGame()
         {
             InitializeComponent();
             DoubleBuffered = true;
             lives = 3;
-            this.BackgroundImage = Properties.Resources.krustySmall;
+            level = 1;
+            score = 0;
             newGame();
         }
 
         public void newGame()
         {
-            lista = new bubbleDoc(1);
+            lista = new bubbleDoc(level);
+            if(level==1)
+                this.BackgroundImage = Properties.Resources.krustySmall;
+            else if (level==2)
+                this.BackgroundImage = Properties.Resources.level2;
+            else if (level == 3)
+                this.BackgroundImage = Properties.Resources.level3;
+            else if (level == 4)
+                this.BackgroundImage = Properties.Resources.level4;
+            else if (level == 5)
+                this.BackgroundImage = Properties.Resources.level5;
+            else if (level == 6)
+                this.BackgroundImage = Properties.Resources.level6;
+
             startTicks = 2;
             shot = 0;
             desno = false;
@@ -79,10 +95,10 @@ namespace bubble
                 karakter.Move(Keys.Left, Width);
             if (shot != 0)
             {
-                if (strela.Y >= 53)
+                if (strela.Y >= 52)
                 {
-                    strela.Y -= 8;
-                    strela.Height += 8;
+                    strela.Y -= 9;
+                    strela.Height += 9;
                 }
                 else
                 {
@@ -97,7 +113,31 @@ namespace bubble
                 shot = 0;
                 strela = new Rectangle();
             }
+            if (win())
+            {
+                Time.Stop();
+                timer1.Stop();
+                level += 1;
+                lbLevel.Text = "LEVEL " + level.ToString();
+                score += 100 - pbTime.Value;
+                if(level<6)
+                newGame();
+                else
+                {
+                    DialogResult d = MessageBox.Show("Your score: " + score.ToString(), "YOU WON !", MessageBoxButtons.OK);
+                    if (d == DialogResult.OK)
+                        MyMenu();
+                }
+            }
+            lbScore.Text = "SCORE: " + score.ToString();
             Invalidate();
+        }
+
+        private bool win()
+        {
+            if (lista.lista.Count == 0)
+                return true;
+            return false;
         }
 
         private void die()
@@ -112,8 +152,9 @@ namespace bubble
             if (lives == 0)
             {
                 pictureBox1.Visible = false;
-                lbInfo.Text="GAME OVER";
-                lbInfo.Visible = true;
+                DialogResult d=MessageBox.Show("Your score: "+score.ToString(),"GAME OVER",MessageBoxButtons.OK);
+                if (d == DialogResult.OK)
+                    MyMenu();
             }
             else
                 newGame();
@@ -125,7 +166,7 @@ namespace bubble
                     desno = true;
                 else if (e.KeyData == Keys.Left)
                     levo = true;
-                else if (e.KeyData == Keys.Up && timer1.Enabled==true)
+                else if (e.KeyData == Keys.Space && timer1.Enabled==true)
                 {
                     int pom = karakter.Shoot();
                     if (pom != 0)
@@ -148,6 +189,11 @@ namespace bubble
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+            MyMenu();
+        }
+
+        private void MyMenu()
         {
             Starting menu = new Starting();
             this.Visible = false;

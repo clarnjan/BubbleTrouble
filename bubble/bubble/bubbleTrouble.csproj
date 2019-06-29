@@ -152,5 +152,26 @@
   <ItemGroup>
     <None Include="Resources\krustySmall.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level6.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level4.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level5.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaceTr.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
