@@ -76,7 +76,9 @@ namespace bubble
             if (strela != null)
             {
                 Brush b = new SolidBrush(Color.Yellow);
+                Pen p = new Pen(Color.Black);
                 e.Graphics.FillRectangle(b, strela);
+                e.Graphics.DrawRectangle(p, strela);
             }
 
             karakter.Draw(e.Graphics,Height);
@@ -85,8 +87,15 @@ namespace bubble
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if (lista.checkPop())
+            {
+                karakter.ammo++;
+                shot = 0;
+                strela = new Rectangle();
+            }
             if (lista.Move(Width, Height))
             {
+                Invalidate();
                 die();
             }
             if (desno && !levo)
@@ -106,12 +115,6 @@ namespace bubble
                     shot = 0;
                     strela = new Rectangle();
                 }
-            }
-            if(lista.checkPop())
-            {
-                karakter.ammo++;
-                shot = 0;
-                strela = new Rectangle();
             }
             if (win())
             {

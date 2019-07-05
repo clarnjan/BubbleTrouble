@@ -31,6 +31,8 @@ namespace bubble
         {
             Brush chetka = new SolidBrush(boja);
             g.FillEllipse(chetka, (int)x - radius, (int)y - radius, radius * 2, radius * 2);
+            Pen p = new Pen(Color.Black);
+            g.DrawEllipse(p, (int)x - radius, (int)y - radius, radius * 2, radius * 2);
         }
 
         public void Move(int width)
@@ -100,13 +102,13 @@ namespace bubble
                     return true;
             }
             //kolizija od lev kjosh
-            if (Math.Sqrt((x - (sb.x - 40)) * (x - (sb.x - 40)) + (y - (height - 190)) * (y - (height - 190))) <= radius)
+            if (Math.Sqrt((x - (sb.x - 40)) * (x - (sb.x - 40)) + (y - (height - 185)) * (y - (height - 185))) <= radius)
                 return true;
             //kolizija od desen kjosh
-            if (Math.Sqrt((x - (sb.x + 40)) * (x - (sb.x + 40)) + (y - (height - 190)) * (y - (height - 190))) <= radius)
+            if (Math.Sqrt((x - (sb.x + 40)) * (x - (sb.x + 40)) + (y - (height - 185)) * (y - (height - 185))) <= radius)
                 return true;
             //kolizija od gore
-            if (x >= sb.x - 40 && x <= sb.x + 40 && y + radius >= height - 190)
+            if (x >= sb.x - 40 && x <= sb.x + 40 && y + radius >= height - 185)
                 return true;
             return false;
         }

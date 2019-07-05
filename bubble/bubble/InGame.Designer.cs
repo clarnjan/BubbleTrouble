@@ -72,11 +72,11 @@
             // 
             this.lbLevel.AutoSize = true;
             this.lbLevel.BackColor = System.Drawing.Color.Transparent;
-            this.lbLevel.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLevel.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lbLevel.Location = new System.Drawing.Point(1310, 817);
+            this.lbLevel.Location = new System.Drawing.Point(1360, 815);
             this.lbLevel.Name = "lbLevel";
-            this.lbLevel.Size = new System.Drawing.Size(166, 27);
+            this.lbLevel.Size = new System.Drawing.Size(128, 29);
             this.lbLevel.TabIndex = 14;
             this.lbLevel.Text = "LEVEL: 1";
             // 
@@ -85,7 +85,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(1455, 6);
+            this.pictureBox3.Location = new System.Drawing.Point(1448, 11);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 40);
             this.pictureBox3.TabIndex = 13;
@@ -96,7 +96,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(1399, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(1392, 11);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 40);
             this.pictureBox2.TabIndex = 12;
@@ -107,7 +107,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1347, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(1340, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.TabIndex = 11;
@@ -117,11 +117,11 @@
             // 
             this.lbLives.AutoSize = true;
             this.lbLives.BackColor = System.Drawing.Color.Transparent;
-            this.lbLives.Font = new System.Drawing.Font("Goudy Stout", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLives.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLives.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lbLives.Location = new System.Drawing.Point(1217, 18);
             this.lbLives.Name = "lbLives";
-            this.lbLives.Size = new System.Drawing.Size(124, 26);
+            this.lbLives.Size = new System.Drawing.Size(92, 29);
             this.lbLives.TabIndex = 10;
             this.lbLives.Text = "Lives:";
             // 
@@ -129,11 +129,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Goudy Stout", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(207, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 26);
+            this.label1.Size = new System.Drawing.Size(99, 29);
             this.label1.TabIndex = 9;
             this.label1.Text = "TIME :";
             // 
@@ -142,11 +142,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Sienna;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Goudy Stout", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(55, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 28);
+            this.label2.Size = new System.Drawing.Size(93, 31);
             this.label2.TabIndex = 15;
             this.label2.Text = "MENU";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -160,11 +160,11 @@
             // 
             this.lbInfo.AutoSize = true;
             this.lbInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lbInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbInfo.ForeColor = System.Drawing.Color.Red;
             this.lbInfo.Location = new System.Drawing.Point(741, 365);
             this.lbInfo.Name = "lbInfo";
-            this.lbInfo.Size = new System.Drawing.Size(46, 51);
+            this.lbInfo.Size = new System.Drawing.Size(48, 52);
             this.lbInfo.TabIndex = 16;
             this.lbInfo.Text = "3";
             // 
@@ -172,11 +172,11 @@
             // 
             this.lbScore.AutoSize = true;
             this.lbScore.BackColor = System.Drawing.Color.Transparent;
-            this.lbScore.Font = new System.Drawing.Font("Goudy Stout", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbScore.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lbScore.Location = new System.Drawing.Point(1014, 18);
             this.lbScore.Name = "lbScore";
-            this.lbScore.Size = new System.Drawing.Size(155, 26);
+            this.lbScore.Size = new System.Drawing.Size(137, 29);
             this.lbScore.TabIndex = 17;
             this.lbScore.Text = "SCORE: 0";
             // 
